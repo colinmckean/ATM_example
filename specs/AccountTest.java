@@ -24,4 +24,11 @@ Account account;
     account.withdraw(10);
     assertEquals(90,account.getBalance());
   }
+  @Test
+  public void testCantGoInNegitiveBalance(){
+    account.deposit(10);
+    account.withdraw(20);
+    assertEquals(10, account.getBalance());
+
+  }
 }
