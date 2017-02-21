@@ -1,7 +1,8 @@
 package atm;
 
 public class Wallet{
-  int funds;
+
+  private int funds;
 
   public Wallet(){
     funds = 0;

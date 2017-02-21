@@ -3,9 +3,10 @@ import org.junit.*;
 import atm.*;
 
 public class UserTest {
-User user;
-Wallet wallet;
-Account account;
+
+  User user;
+  Wallet wallet;
+  Account account;
 
   @Before
   public void before(){
@@ -13,11 +14,12 @@ Account account;
     account = new Account();
     user = new User(wallet, account);
   }
-  
+
   @Test
   public void testUserWalletHasFunds(){
     assertEquals(0, user.getWalletFunds());
   }
+
   @Test
   public void testUserAccountHasFunds(){
     assertEquals(0, user.getAccountBalance());

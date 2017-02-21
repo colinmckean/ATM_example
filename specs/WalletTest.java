@@ -3,16 +3,19 @@ import org.junit.*;
 import atm.*;
 
 public class WalletTest {
-Wallet wallet;
+  
+  Wallet wallet;
 
   @Before
   public void before(){
     wallet = new Wallet();
   }
+
   @Test
   public void testWalletIsEmpty(){
     assertEquals(0, wallet.getTotalFunds());
   }
+
   @Test
   public void testWalletAddFunds(){
     wallet.addCash(10);

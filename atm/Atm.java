@@ -1,8 +1,9 @@
 package atm;
 
 public class Atm{
-  int cashReserves;
-  int transactionLimit;
+
+  private int cashReserves;
+  private int transactionLimit;
 
   public Atm(int cashReserves){
     this.cashReserves = cashReserves;
@@ -18,6 +19,7 @@ public class Atm{
       this.cashReserves -= amount;
     }
   }
+  
   public void fillUp(int amount){
     this.cashReserves += amount;
   }
