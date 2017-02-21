@@ -25,8 +25,13 @@ public class UserTest {
     assertEquals(0, user.getAccountBalance());
   }
   @Test
-  public void testUserWalletCanDepost(){
+  public void testUserCanDepost(){
     user.makeDeposit(10);
     assertEquals(10, user.getAccountBalance());
+  }
+  @Test
+  public void testUserCanPutMoneyInWallet(){
+    user.addFundsToWallet(10);
+    assertEquals(10, user.getWalletFunds());
   }
 }
