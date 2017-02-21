@@ -34,4 +34,13 @@ public class UserTest {
     user.addFundsToWallet(10);
     assertEquals(10, user.getWalletFunds());
   }
+  @Test
+  public void testUserCanMakeDeposits(){
+    user.addFundsToWallet(10);
+    assertEquals(10, user.getWalletFunds());
+    assertEquals(0, user.getAccountBalance());
+    user.userMakeTransactionDeposit(10);
+    assertEquals(0, user.getWalletFunds());
+    assertEquals(10, user.getAccountBalance());
+  }
 }
