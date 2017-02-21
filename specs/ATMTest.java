@@ -15,4 +15,10 @@ Atm emptyAtm;
   public void testBankHasMoney(){
     assertEquals(1000, atm.getCashReserves());
   }
+
+  @Test
+  public void canWithDrawMoney(){
+    atm.withDrawCash(10);
+    assertEquals(990, atm.getCashReserves());
+  }
 }
