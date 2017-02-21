@@ -6,4 +6,8 @@ public class Atm{
   public Atm(int cashReserves){
     this.cashReserves = cashReserves;
   }
+
+  public int getCashReserves(){
+    return cashReserves;
+  }
 }
