@@ -17,4 +17,13 @@ public class User{
   public int getAccountBalance(){
     return this.account.getBalance();
   }
+
+  public void makeDeposit(int amount){
+    this.account.deposit(amount);
+  }
+  
+  public void addFundsToWallet(int amount){
+    this.wallet.addCash(amount);
+  }
+
 }
