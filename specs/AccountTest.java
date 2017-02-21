@@ -10,7 +10,12 @@ Account account;
     account = new Account();
   }
   @Test
-  public void accountBalance(){
+  public void testAccountBalance(){
     assertEquals(0,account.getBalance());
+  }
+  @Test
+  public void testAccountDeposit(){
+    account.deposit(100);
+    assertEquals(100,account.getBalance());
   }
 }
