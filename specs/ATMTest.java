@@ -30,5 +30,9 @@ Atm emptyAtm;
   public void testFillUp(){
     emptyAtm.fillUp(500);
     assertEquals(500, emptyAtm.getCashReserves());
+  }  
+  @Test
+  public void test250withdrawLimit(){
+    atm.withDrawCash(260); assertEquals(1000, atm.getCashReserves());
   }
 }
