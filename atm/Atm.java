@@ -14,12 +14,20 @@ public class Atm{
     return cashReserves;
   }
 
+  public boolean canWithDrawMoney(int amount){
+    if(cashReserves >= amount && amount <= transactionLimit){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
   public void withDrawCash(int amount){
     if(cashReserves >= amount && amount <= transactionLimit){
       this.cashReserves -= amount;
     }
   }
-  
+
   public void fillUp(int amount){
     this.cashReserves += amount;
   }

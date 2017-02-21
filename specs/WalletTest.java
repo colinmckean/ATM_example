@@ -3,7 +3,7 @@ import org.junit.*;
 import atm.*;
 
 public class WalletTest {
-  
+
   Wallet wallet;
 
   @Before
