@@ -18,4 +18,8 @@ Account account;
   public void testUserWalletHasFunds(){
     assertEquals(0, user.getWalletFunds());
   }
+  @Test
+  public void testUserAccountHasFunds(){
+    assertEquals(0, user.getAccountBalance());
+  }
 }
