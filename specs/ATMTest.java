@@ -11,4 +11,8 @@ Atm emptyAtm;
     atm = new Atm(1000);
     emptyAtm = new Atm(0);
   }
+  @Test
+  public void testBankHasMoney(){
+    assertEquals(1000, atm.getCashReserves());
+  }
 }
