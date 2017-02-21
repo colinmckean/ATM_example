@@ -5,14 +5,18 @@ public class Account{
   public Account(){
     accountBalance = 0;
   }
+  
   public int getBalance(){
     return accountBalance;
   }
 
   public void deposit(int deposit){
-    accountBalance += deposit;
+    this.accountBalance += deposit;
   }  
+
   public void withdraw(int amount){
-    accountBalance -= amount;
+    if(amount <= accountBalance){
+      this.accountBalance -= amount;
+    }
   }
 }
