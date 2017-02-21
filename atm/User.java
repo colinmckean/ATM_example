@@ -28,7 +28,7 @@ public class User{
   public void addFundsToWallet(int amount){
     this.wallet.addCash(amount);
   }
-
+  
   public void userMakeTransactionDeposit(int amount){
     if(getWalletFunds() >= amount){
       addFundsToWallet(-amount);
@@ -40,11 +40,10 @@ public class User{
 
   public void userMakeTransactionWithdraw(int amount, Atm atm){
     if(getAccountBalance() >= amount){
-      System.out.println("HELLO?!");
       if(atm.canWithDrawMoney(amount)){
-        System.out.println("HI");
         this.account.withdraw(amount);
         this.addFundsToWallet(amount);
+        System.out.println("completed.");
       }else{
         System.out.println("nope");
       }
