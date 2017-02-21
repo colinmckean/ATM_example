@@ -4,7 +4,6 @@ import atm.*;
 
 public class WalletTest {
 Wallet wallet;
-Wallet emptyAtm;
 
   @Before
   public void before(){
@@ -13,5 +12,10 @@ Wallet emptyAtm;
   @Test
   public void testWalletIsEmpty(){
     assertEquals(0, wallet.getTotalFunds());
+  }
+  @Test
+  public void testWalletAddFunds(){
+    wallet.addCash(10);
+    assertEquals(10, wallet.getTotalFunds());
   }
 }
