@@ -21,9 +21,17 @@ public class User{
   public void makeDeposit(int amount){
     this.account.deposit(amount);
   }
-  
+
   public void addFundsToWallet(int amount){
     this.wallet.addCash(amount);
   }
 
+  public void userMakeTransactionDeposit(int amount){
+    if(getWalletFunds() >= amount){
+      addFundsToWallet(-amount);
+      makeDeposit(amount);
+    }else{
+      System.out.println("no funds.");
+    }
+  }
 }
