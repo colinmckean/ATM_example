@@ -23,7 +23,12 @@ Atm emptyAtm;
   }
   @Test
   public void canNotWithDrawBelowZero(){
-    emptyAtm.withDrawCash(10);
+    emptyAtm.withDrawCash(20);
     assertEquals(0, emptyAtm.getCashReserves());
+  }
+  @Test
+  public void testFillUp(){
+    emptyAtm.fillUp(500);
+    assertEquals(500, emptyAtm.getCashReserves());
   }
 }
