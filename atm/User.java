@@ -4,10 +4,13 @@ public class User{
 
   private Wallet wallet;
   private Account account;
+  private String name;
 
-  public User(Wallet wallet, Account account){
+  public User(String name, Wallet wallet, Account account){
     this.wallet = wallet;
     this.account = account;
+    this.name = name;
+
   }
 
   public int getWalletFunds(){
@@ -33,5 +36,19 @@ public class User{
     }else{
       System.out.println("no funds.");
     }
+  }
+
+  public void userMakeTransactionWithdraw(int amount, Atm atm){
+    if(getAccountBalance() >= amount){
+      System.out.println("HELLO?!");
+      if(atm.canWithDrawMoney(amount)){
+        System.out.println("HI");
+        this.account.withdraw(amount);
+        this.addFundsToWallet(amount);
+      }else{
+        System.out.println("nope");
+      }
+    }
+
   }
 }
